@@ -76,8 +76,9 @@ hr {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  flex-wrap: wrap;
   max-width: 80vw;
-  margin: 120px;
+  margin: auto;
   gap: 2rem;
 }
 
@@ -96,6 +97,8 @@ hr {
 }
 .counter {
   background-color: #f7f8fd;
+  margin: 55px;
+  padding: 65px;
   display: flex;
   flex-direction: row;
   align-self: flex-start;
@@ -109,4 +112,15 @@ hr {
 
 .price {
   font-size: 38px;
+}
+
+button {
+  background-color: #ff7d1b;
+}
+
+button:hover {
+  background-color: darkblue;
+}
+button:active {
+  transform: scale(2.95);
 }
