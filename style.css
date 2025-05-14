@@ -2,6 +2,19 @@ body {
   margin: 0;
   padding: 0;
 }
+nav {
+  display: flex;
+  justify-content: space-between;
+  & .left-link {
+    display: flex;
+    align-items: center;
+  }
+
+  & .far-right-link {
+    display: flex;
+    align-items: center;
+  }
+}
 
 ul {
   list-style: none;
@@ -30,13 +43,22 @@ h1 {
   margin: 0;
 }
 
+h3 {
+  color: #999999;
+}
 p {
   font-size: 22px;
 }
 
-#currency {
+#description {
+  color: #999999;
+}
+
+.price {
+  font-size: 25px;
   font-weight: bold;
 }
+
 .left-link {
   font-family: "Kumbh Sans", sans-serif;
   padding: 1em;
@@ -108,10 +130,6 @@ hr {
   background-color: #ff7d1b;
   display: flex;
   flex-direction: row;
-}
-
-.price {
-  font-size: 38px;
 }
 
 button {
