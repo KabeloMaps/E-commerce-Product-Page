@@ -2,6 +2,7 @@ body {
   margin: 0;
   padding: 0;
 }
+
 nav {
   display: flex;
   justify-content: space-between;
@@ -9,7 +10,6 @@ nav {
     display: flex;
     align-items: center;
   }
-
   & .far-right-link {
     display: flex;
     align-items: center;
@@ -46,6 +46,7 @@ h1 {
 h3 {
   color: #999999;
 }
+
 p {
   font-size: 22px;
 }
@@ -57,6 +58,22 @@ p {
 .price {
   font-size: 25px;
   font-weight: bold;
+}
+
+.discount-tag {
+  background-color: black;
+  color: white;
+  padding: 2px 8px;
+  border-radius: 5px;
+  font-size: 16px;
+  margin-left: 10px;
+}
+
+.original-price {
+  color: #999999;
+  font-size: 18px;
+  margin-top: 5px;
+  display: inline-block;
 }
 
 .left-link {
@@ -82,7 +99,6 @@ avatar-img {
   flex-direction: row;
   justify-items: flex-end;
   padding-left: 38vw;
-  /* margin: 0;*/
 }
 
 .cart-button {
@@ -90,10 +106,11 @@ avatar-img {
   flex-direction: row;
   padding-right: 5px;
 }
+
 hr {
   border: none;
-  border-top: 0.5px solid rgb(27, 26, 26); /* Black underline */
-  margin: 20px 0; /* Adds space before and after the line */
+  border-top: 0.5px solid rgb(27, 26, 26);
+  margin: 20px 0;
 }
 
 .product-container {
@@ -124,6 +141,7 @@ hr {
   justify-content: center;
   align-items: center;
 }
+
 .lightbox-content {
   max-width: 80%;
   max-height: 80%;
@@ -143,7 +161,7 @@ hr {
 .gallery {
   display: flex;
   flex-direction: column;
-  align-items: center; /* center everything horizontally */
+  align-items: center;
   gap: 1rem;
 }
 
@@ -157,38 +175,22 @@ hr {
   display: flex;
   gap: 1rem;
   justify-content: center;
-}
-
-.thumbnails img {
-  width: 60px;
-  cursor: pointer;
-  border-radius: 8px;
-  opacity: 0.6;
-  transition: opacity 0.3s ease;
-}
-
-.thumbnails img:hover,
-.thumbnails img.active {
-  opacity: 1;
-  border: 2px solid hsl(26, 100%, 55%);
-}
-
-.thumbnails {
-  display: flex;
-  gap: 10px;
   margin-top: 20px;
 }
 
 .thumbnails img {
   width: 80px;
   cursor: pointer;
-  border: 2px solid transparent;
   border-radius: 8px;
-  transition: 0.3s;
+  opacity: 0.6;
+  transition: opacity 0.3s ease, border-color 0.3s ease;
+  border: 2px solid transparent;
 }
 
-.thumbnails img:hover {
-  border-color: hsl(26, 100%, 55%);
+.thumbnails img:hover,
+.thumbnails img.active {
+  opacity: 1;
+  border: 2px solid hsl(26, 100%, 55%);
 }
 
 #description-container {
@@ -199,6 +201,7 @@ hr {
   display: flex;
   justify-content: space-between;
 }
+
 .counter {
   background-color: #f7f8fd;
   margin: 55px;
@@ -220,6 +223,33 @@ button {
 button:hover {
   background-color: darkblue;
 }
+
 button:active {
   transform: scale(2.95);
+}
+
+/* === Lightbox Navigation Arrows === */
+.nav {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  cursor: pointer;
+  padding: 1rem;
+  z-index: 1001;
+}
+
+.nav.left {
+  left: 2rem;
+}
+
+.nav.right {
+  right: 2rem;
+}
+
+.nav img {
+  width: 40px;
+  height: 40px;
+  background-color: white;
+  border-radius: 50%;
+  padding: 10px;
 }
