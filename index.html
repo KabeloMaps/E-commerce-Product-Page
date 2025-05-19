@@ -61,13 +61,36 @@
 
     <!--Body section-->
     <section class="product-container">
-        <!--The product image-->
-          <img
-            id="product-img"
-            src="./images/image-product-1.jpg"
-            alt="product image"
-          />
+        <!--Contianer for image gallery-->
 
+        <div class="gallery">
+          <!-- Main Image -->
+          <div class="main-image">
+            <img id="product-img" src="./images/image-product-1.jpg" alt="Main product"  onclick="openLightbox(this.src)" />
+          </div>
+        
+       <!-- Thumbnails -->
+        <div class="thumbnails">
+          <img src="./images/image-product-1.jpg" alt="Thumb 1" />
+          <img src="./images/image-product-2.jpg" alt="Thumb 2" />
+          <img src="./images/image-product-3.jpg" alt="Thumb 3" />
+          <img src="./images/image-product-4.jpg" alt="Thumb 4" />
+        </div>
+      </div>
+
+
+          </div>
+
+        <!-- Lightbox -->
+        <div id="lightbox" class="lightbox" onclick="closeLightbox()">
+          <span class="close" onclick="closeLightbox()">&times;</span>
+          <img id="lightbox-img" class="lightbox-content" src="" alt="lightbox view">
+        </div>
+
+
+
+
+          
         <!--The description of the content-->
         <div id="description-container">
           <h3>SNEAKER COMPANY</h3>
@@ -101,11 +124,12 @@
               
               <button type="submit">
                 <img src="./images/icon-cart.svg">
-                <p>Add to cart  </p>       
+                
+                <p>Add to cart</p>       
               </button>
               
                             
-                          </div>
+              </div>
                           
         </div>
   
@@ -129,12 +153,20 @@
         </div>
       </div>
     </section>
+    <script src="lightbox.js"></script>
+<!-- Lightbox Overlay -->
+<div id="lightbox" class="lightbox">
+  <span class="close" onclick="closeLightbox()">&times;</span>
+  <img id="lightbox-img" class="lightbox-content" src="" />
 
-    <footer>
-      Challenge by
-      <a href="https://www.frontendmentor.io?ref=challenge" target="_blank"
-        >Frontend Mentor</a
-      >. Coded by <a href="#">Professor_Pants</a>.
-    </footer>
+
+   <!-- Left & Right Arrows -->
+   <span class="nav left" onclick="changeSlide(-1)">
+    <img src="./images/icon-previous.svg" alt="Previous">
+  </span>
+  <span class="nav right" onclick="changeSlide(1)">
+    <img src="./images/icon-next.svg" alt="Next">
+  </span>
+</div>
   </body>
 </html>
