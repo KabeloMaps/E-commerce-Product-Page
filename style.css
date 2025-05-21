@@ -93,8 +93,7 @@ p {
 }
 
 .far-right-link,
-cart-button,
-avatar-img {
+cart-button {
   display: flex;
   flex-direction: row;
   justify-items: flex-end;
@@ -104,7 +103,14 @@ avatar-img {
 .cart-button {
   display: flex;
   flex-direction: row;
-  padding-right: 5px;
+  padding-right: 25px;
+}
+
+.cart-button img {
+  display: flex;
+
+  flex-direction: row;
+  padding-right: 25px;
 }
 
 hr {
@@ -199,33 +205,39 @@ hr {
 
 .script-container {
   display: flex;
-  justify-content: space-between;
+  flex-direction: row;
+  align-items: center;
+  justify-content: start;
+  gap: 1rem;
 }
 
 .counter {
-  background-color: #f7f8fd;
-  margin: 55px;
-  padding: 65px;
   display: flex;
+  background-color: #f7f8fd;
   flex-direction: row;
-  align-self: flex-start;
+  align-items: center;
+  justify-content: center;
+  border-radius: 10px;
+  padding: 1px 45px;
+  gap: 55px; /* creates even spacing between - 0 + */
 }
 
-.call-to-action {
-  background-color: #ff7d1b;
+.Add-To-Cart p {
   display: flex;
+  align-items: center;
+  font-weight: bold;
+  justify-content: space-between;
+}
+#add-to-cart-btn img {
+  margin-right: 15px;
 }
 
 button {
+  display: flex;
   background-color: #ff7d1b;
-}
-
-button:hover {
-  background-color: darkblue;
-}
-
-button:active {
-  transform: scale(2.95);
+  align-items: center;
+  justify-content: space-between;
+  border-radius: 10px;
 }
 
 /* === Lightbox Navigation Arrows === */
