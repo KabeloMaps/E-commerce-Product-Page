@@ -1,19 +1,6 @@
 # Frontend Mentor - E-commerce product page solution
 
-- This is a solution to the E-commerce product page challenge on Frontend Mentor.
-
-## Table of contents
-
-- [Overview](#overview)
-  - [The challenge](#the-challenge)
-  - [Screenshot](#screenshot)
-  - [Links](#links)
-- [My process](#my-process)
-  - [Built with](#built-with)
-  - [What I learned](#what-i-learned)
-  - [Continued development](#continued-development)
-  - [Useful resources](#useful-resources)
-- [Author](#author)
+- This is a solution to the E-commerce product page challenge on Frontend Mentor
 
 ### The challenge
 
@@ -28,10 +15,11 @@ Users should be able to:
 
 ### Screenshot
 
+![alt text](image.png)
+
 ### Links
 
-- Solution URL: [Add solution URL here](https://your-solution-url.com)
-- Live Site URL: [Add live site URL here](https://your-live-site-url.com)
+- Live Site URL: https://product-display-page.netlify.app
 - Challenge URL: https://www.frontendmentor.io/challenges/ecommerce-product-page-UPsZ9MJp6
 
 ## My process
@@ -46,24 +34,8 @@ Users should be able to:
 
 ### What I learned
 
--
+- Implementing JavaScript for the add to cart functionality
 
 ### Continued development
 
 - I'm still unfamiliar with states in css
--
-
-### Useful resources
-
-- [Example resource 1](https://www.example.com) - This helped me for XYZ reason. I really liked this pattern and will use it going forward.
-- [Example resource 2](https://www.example.com) - This is an amazing article which helped me finally understand XYZ. I'd recommend it to anyone still learning this concept.
-
-## Author
-
-- Website - [Kabelo Maponya](https://www.your-site.com)
-- Frontend Mentor - [@yourusername](https://www.frontendmentor.io/profile/yourusername)
-
-## Project Completion
-
-- Estimated date - Saturday, 15 March 2025
--
