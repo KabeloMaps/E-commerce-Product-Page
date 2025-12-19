@@ -9,6 +9,12 @@ import {
   CarouselPrevious,
 } from "./ui/carousel";
 
+export const slides = [
+  "/images/image-product-1.jpg",
+  "/images/image-product-2.jpg",
+  "/images/image-product-3.jpg",
+];
+
 export function HeroSection() {
   return (
     <Carousel className="w-full max-w-xs">

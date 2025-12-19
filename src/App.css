@@ -1,5 +1,6 @@
 @import "tailwindcss";
 @import "tw-animate-css";
+@import url(https://fonts.google.com/specimen/Kumbh+Sans);
 
 @custom-variant dark (&:is(.dark *));
 
@@ -45,6 +46,7 @@
 }
 
 :root {
+  --font-secondary: "Kumbh Sans", sans-serif;
   --radius: 0.625rem;
   --background: oklch(1 0 0);
   --foreground: oklch(0.145 0 0);
@@ -120,4 +122,16 @@
   body {
     @apply bg-background text-foreground;
   }
+}
+
+@font-face {
+  font-family: "Kumbh Sans", sans-serif;
+  src: url(https://fonts.google.com/specimen/Kumbh+Sans);
+}
+.kumbh-sans-<uniquifier > {
+  font-family: "Kumbh Sans", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: <weight>;
+  font-style: normal;
+  font-variation-settings: "YOPQ" 300;
 }

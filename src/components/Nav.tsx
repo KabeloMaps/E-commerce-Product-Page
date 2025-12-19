@@ -1,5 +1,3 @@
-import React from "react";
-
 import {
   Disclosure,
   DisclosureButton,
@@ -53,7 +51,7 @@ const Nav = () => {
               />
             </div>
             <div className="hidden sm:ml-6 sm:block">
-              <div className="flex space-x-4">
+              <div className="flex space-x-4 ">
                 {navigation.map((item) => (
                   <a
                     key={item.name}
