@@ -1,21 +1,14 @@
 import Description from "./components/Description";
 import "./App.css";
 import Carousel from "./components/Carousel";
-import { slides } from "./components/HeroSection";
+import { HeroSection, slides } from "./components/HeroSection";
 import Nav from "./components/Nav";
 
 function App() {
   return (
-    <main>
+    <main className="App grid grid-cols-1 overflow-hidden">
       <Nav />
-      <div className="Caraousel-container">
-        <Carousel>
-          {slides.map((slide, index) => (
-            <img key={index} src={slide} alt={`Slide ${index + 1}`} />
-          ))}
-        </Carousel>{" "}
-      </div>{" "}
-      <Description />
+      <HeroSection />
     </main>
   );
 }

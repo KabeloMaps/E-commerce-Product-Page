@@ -1,13 +1,7 @@
 import * as React from "react";
-
-import { Card, CardContent } from "./ui/card";
-import {
-  Carousel,
-  CarouselContent,
-  CarouselItem,
-  CarouselNext,
-  CarouselPrevious,
-} from "./ui/carousel";
+import { Carousel, CarouselContent, CarouselItem } from "./ui/carousel";
+import type { CarouselApi } from "./ui/carousel";
+import Description from "./Description";
 
 export const slides = [
   "/images/image-product-1.jpg",
@@ -16,30 +10,51 @@ export const slides = [
 ];
 
 export function HeroSection() {
-  return (
-    <Carousel className="w-full max-w-xs">
-      <CarouselContent>
-        {Array.from({ length: 4 }).map((_, index) => (
-          <CarouselItem key={index}>
-            <div className="p-1 basis-1/3">
-              <Card>
-                <CardContent className="flex aspect-square items-center justify-center p-6">
-                  {/* Add an image here */}
-                  <img
-                    src={`/images/image-product-${index + 1}.jpg`}
-                    alt={`Product ${index + 1}`}
-                    className="w-full h-full object-cover"
-                  />
-                </CardContent>
-              </Card>
-            </div>
-          </CarouselItem>
-        ))}
-      </CarouselContent>
+  const [api, setApi] = React.useState<CarouselApi | null>(null);
 
-      {/* Carousel Navigation */}
-      <CarouselPrevious />
-      <CarouselNext />
-    </Carousel>
+  return (
+    <section className="grid grid-cols-1 sm:grid-cols-2 gap-6">
+      <Carousel setApi={setApi} className="w-full">
+        <CarouselContent>
+          {slides.map((src, index) => (
+            <CarouselItem key={src}>
+              {/* Slide container */}
+              <div className="relative w-full aspect-square overflow-hidden">
+                {/* Image */}
+                <img
+                  src={src}
+                  alt={`Product ${index + 1}`}
+                  className="w-full h-full object-cover"
+                />
+
+                {/* Previous button */}
+                <button
+                  onClick={() => api?.scrollPrev()}
+                  className="absolute left-4 top-1/2 -translate-y-1/2 bg-white rounded-full p-4  disabled:opacity-40"
+                  aria-label="Previous slide"
+                >
+                  <img
+                    src="/images/icon-previous.svg"
+                    alt=""
+                    className="size-6"
+                  />
+                </button>
+
+                {/* Next button */}
+                <button
+                  onClick={() => api?.scrollNext()}
+                  className="absolute right-4 top-1/2 -translate-y-1/2 bg-white rounded-full p-4  disabled:opacity-40"
+                  aria-label="Next slide"
+                >
+                  <img src="/images/icon-next.svg" alt="" className="size-6" />
+                </button>
+              </div>
+            </CarouselItem>
+          ))}
+        </CarouselContent>
+      </Carousel>
+
+      <Description />
+    </section>
   );
 }
