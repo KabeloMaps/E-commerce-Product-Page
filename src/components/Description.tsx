@@ -12,15 +12,15 @@ const Description = () => {
         Featuring a durable rubber outer sole, they’ll withstand everything the
         weather can offer.
       </p>
-      <div className="flex items-center w-full">
-        <div className="flex items-center gap-4">
+      <div className="price-container flex flex-wrap sm:flex-col sm:flex-nowrap w-full">
+        <div className="flex items-center gap-4  ">
           <span className="text-[3.15rem] font-bold text-primary">$125.00</span>
           <span className="bg-black text-white text-[2rem] px-3 py-2 rounded-xl font-bold">
             50%
           </span>
         </div>
 
-        <span className="ml-auto text-[2.5rem] font-bold text-gray-500 line-through">
+        <span className=" flex ml-auto sm:mr-auto sm:ml-0  text-[2.5rem] font-bold text-gray-500 line-through">
           $250
         </span>
       </div>
