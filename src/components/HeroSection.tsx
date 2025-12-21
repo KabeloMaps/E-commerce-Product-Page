@@ -13,7 +13,7 @@ export function HeroSection() {
   const [api, setApi] = React.useState<CarouselApi | null>(null);
 
   return (
-    <section className="grid grid-cols-1 sm:grid-cols-2 gap-6">
+    <section className="grid grid-cols-1 sm:grid-cols-2 sm:items-center gap-6">
       <Carousel setApi={setApi} className="w-full">
         <CarouselContent>
           {slides.map((src, index) => (

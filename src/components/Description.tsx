@@ -1,7 +1,7 @@
 const Description = () => {
   return (
     <div className=" py-6 px-6">
-      <h1 className="font-bold text-[1.55rem] text-gray-400 tracking-[0.22rem]">
+      <h1 className="font-bold text-[1.55rem] text-gray-500 tracking-[0.22rem]">
         SNEAKER COMPANY
       </h1>
       <h2 className="text-[2.85rem] font-bold tracking-[0.1rem] pb-6">
@@ -12,17 +12,19 @@ const Description = () => {
         Featuring a durable rubber outer sole, they’ll withstand everything the
         weather can offer.
       </p>
-      <div className="price-container w-full flex p-0 m-0 items-center">
-        <button className="text-[3.25rem] font-bold text-primary">
-          <span className="font">$125.00</span>
-        </button>
-        <p className="bg-black text-[2rem] text-white font-bold items-center flex justify-center py-2 px-3 rounded-xl ml-5 ">
-          50%
-        </p>
-        <p className=" text-[2.5rem]  font-bold  text-gray-500 line-through flex items-center justify-center py-5 px-5 mx-auto">
+      <div className="flex items-center w-full">
+        <div className="flex items-center gap-4">
+          <span className="text-[3.15rem] font-bold text-primary">$125.00</span>
+          <span className="bg-black text-white text-[2rem] px-3 py-2 rounded-xl font-bold">
+            50%
+          </span>
+        </div>
+
+        <span className="ml-auto text-[2.5rem] font-bold text-gray-500 line-through">
           $250
-        </p>
+        </span>
       </div>
+
       <div className="counter bg-gray-100 w-full h-24 flex items-center justify-between py-10 px-10 mt-7 rounded-xl cursor-pointer">
         <img className="size-6" src="/images/icon-minus.svg" alt="" />
         <p className="text-[2.25rem] font-bold">0</p>
