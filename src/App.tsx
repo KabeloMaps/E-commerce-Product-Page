@@ -1,6 +1,4 @@
-import Description from "./components/Description";
 import "./App.css";
-import Carousel from "./components/Carousel";
 import { HeroSection, slides } from "./components/HeroSection";
 import Nav from "./components/Nav";
 

@@ -14,25 +14,28 @@ const Description = () => {
       </p>
       <div className="price-container flex flex-wrap sm:flex-col sm:flex-nowrap w-full">
         <div className="flex items-center gap-4  ">
-          <span className="text-[3.15rem] font-bold text-primary">$125.00</span>
+          <span className="text-[2.85rem] font-bold text-primary">$125.00</span>
           <span className="bg-black text-white text-[2rem] px-3 py-2 rounded-xl font-bold">
             50%
           </span>
         </div>
 
-        <span className=" flex ml-auto sm:mr-auto sm:ml-0  text-[2.5rem] font-bold text-gray-500 line-through">
+        <span className=" flex ml-auto sm:mr-auto sm:ml-0  text-[2rem] font-bold text-gray-500 line-through">
           $250
         </span>
       </div>
 
-      <div className="counter bg-gray-100 w-full h-24 flex items-center justify-between py-10 px-10 mt-7 rounded-xl cursor-pointer">
-        <img className="size-6" src="/images/icon-minus.svg" alt="" />
-        <p className="text-[2.25rem] font-bold">0</p>
-        <img className="size-6" src="/images/icon-plus.svg" alt="" />
-      </div>
-      <div className="cart flex items-center justify-center  w-full h-16 rounded-xl mt-6 text-gray-800 font-bold text-[1.75rem] cursor-pointer  py-13 bg-[#ff7d1a] shadow-xl shadow-orange-300">
-        <img className="size-9 " src="/images/icon-cart.svg" alt="" />
-        <p className="pl-5">Add to cart</p>
+      <div className="flex flex-col sm:flex-row gap-4">
+        {" "}
+        <div className="counter bg-gray-100 w-full h-24 flex items-center justify-between py-10 px-10 mt-7 rounded-xl cursor-pointer">
+          <img className="size-6" src="/images/icon-minus.svg" alt="" />
+          <p className="text-[2.25rem] font-bold">0</p>
+          <img className="size-6" src="/images/icon-plus.svg" alt="" />
+        </div>
+        <div className="cart flex items-center justify-center  w-full h-16 rounded-xl mt-6 text-gray-800 font-bold text-[1.75rem] cursor-pointer  py-13 bg-[#ff7d1a] shadow-xl shadow-orange-300">
+          <img className="size-9 " src="/images/icon-cart.svg" alt="" />
+          <p className="pl-5">Add to cart</p>
+        </div>
       </div>
     </div>
   );
