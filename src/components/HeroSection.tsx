@@ -3,7 +3,7 @@ import { Carousel, CarouselContent, CarouselItem } from "./ui/carousel";
 import type { CarouselApi } from "./ui/carousel";
 import Description from "./Description";
 
-export const slides = [
+export const productImages = [
   "/images/image-product-1.jpg",
   "/images/image-product-2.jpg",
   "/images/image-product-3.jpg",
@@ -16,7 +16,7 @@ export function HeroSection() {
     <section className="grid grid-cols-1 sm:grid-cols-2 sm:items-center gap-6">
       <Carousel setApi={setApi} className="w-full">
         <CarouselContent>
-          {slides.map((src, index) => (
+          {productImages.map((src, index) => (
             <CarouselItem key={src}>
               {/* Slide container */}
               <div className="relative w-full aspect-square overflow-hidden">
